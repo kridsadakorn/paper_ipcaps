@@ -1,0 +1,7 @@
+name: "Supplementary files for the IPCAPS paper"
+navbar:
+  title: "Supplementary files for the IPCAPS paper"
+  left:
+    - text: "Home"
+      href: index.html
+
