@@ -1,6 +1,6 @@
-name: "Supplementary files for the IPCAPS paper"
+name: "IPCAPS"
 navbar:
-  title: "Supplementary files for the IPCAPS paper"
+  title: "IPCAPS"
   left:
     - text: "Home"
       href: index.html

@@ -11,7 +11,7 @@
 
 
 
-<title>Supplementary files for the IPCAPS paper</title>
+<title>Extra Supplementary Information</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -222,6 +225,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -229,6 +295,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -241,7 +317,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Supplementary files for the IPCAPS paper</a>
+      <a class="navbar-brand" href="index.html">IPCAPS</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -260,16 +336,460 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Supplementary files for the IPCAPS
-paper</h1>
+<h1 class="title toc-ignore">Extra Supplementary Information</h1>
 
 </div>
 
 
-<p>Data sets</p>
+<p><font size="5">Fine-scale subpopulation detection via SNP-based
+unsupervised method: A case study on the 1000 Genomes Project
+Resources</font></p>
+<p>For the supplementary information of the paper, please check <a
+href="https://doi.org/10.5281/zenodo.7141144"><img
+src="https://zenodo.org/badge/DOI/10.5281/zenodo.7141144.svg"
+alt="DOI" /></a></p>
+<p>The page contains the extra information as:</p>
+<ol style="list-style-type: decimal">
+<li>Real-life scenario: the 1000 Genomes Project. This section contains
+the figures for principal component analysis and the output results from
+IPCAPS.</li>
+<li>Simulated data set used to find the optimal Fixation Index as
+Threshold for fine-scale structure.</li>
+<li>Complex simulated data set</li>
+</ol>
+<div id="real-life-scenario-the-1000-genomes-project"
+class="section level2">
+<h2>Real-life scenario: the 1000 Genomes Project</h2>
+<p>IPCAPS subtyping resulted in 24 groups (excluding the outliers).
+Figure 1 shows the first 3 principal components of all samples including
+the outliers with populations as labels. Figure 2 shows the first 3
+principal components of all samples excluding the outliers with
+populations as labels. Figure 3 show the first 3 principal components of
+all samples excluding the outliers with the IPCAPS clusters as labels.
+For the result file, it consists of 28 columns (Table 1). The fist 3
+columns are individual IDs, population labels, assigned clusters, and
+the first 25 principal components. The full result table can be
+downloaded from <a href="data_1000g/PCA_1000G.csv">here</a>.</p>
+<p><img src="data_1000g/PCA_1000G_by_populations_with_outliers.png" width="600" /></p>
+<p>Figure 1: the first 3 principal components of all samples including
+the outliers with populations as labels.</p>
+<p><img src="data_1000g/PCA_1000G_by_populations_without_outliers.png" width="600" /></p>
+<p>Figure 2: the first 3 principal components of all samples excluding
+the outliers with populations as labels.</p>
+<p><img src="data_1000g/PCA_1000G_by_cluster_without_outliers.png" width="600" /></p>
+<p>Figure 3: the first 3 principal components of all samples excluding
+the outliers with the IPCAPS clusters as labels.</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="12%" />
+<col width="9%" />
+<col width="21%" />
+<col width="20%" />
+<col width="21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Individual</th>
+<th>Population</th>
+<th>Cluster</th>
+<th>PC1</th>
+<th>PC2</th>
+<th>PC3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>individual1</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0107380574672092</td>
+<td>0.027763112230486</td>
+<td>-0.0128725996586141</td>
+</tr>
+<tr class="even">
+<td>individual2</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0106240572135524</td>
+<td>0.0276327017132276</td>
+<td>-0.0122091313249076</td>
+</tr>
+<tr class="odd">
+<td>individual3</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0110723121500444</td>
+<td>0.0270967793266127</td>
+<td>-0.0113694771754151</td>
+</tr>
+<tr class="even">
+<td>individual4</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0109009970688707</td>
+<td>0.0277297792670736</td>
+<td>-0.0125973983735742</td>
+</tr>
+<tr class="odd">
+<td>individual5</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0109107684428465</td>
+<td>0.0271314604934395</td>
+<td>-0.0127706893426669</td>
+</tr>
+<tr class="even">
+<td>individual6</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.011440781490344</td>
+<td>0.0271660498293538</td>
+<td>-0.0116799608060983</td>
+</tr>
+<tr class="odd">
+<td>individual7</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0109098385167301</td>
+<td>0.0271773381154484</td>
+<td>-0.0118470043335346</td>
+</tr>
+<tr class="even">
+<td>individual8</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0107978960499085</td>
+<td>0.027178628903619</td>
+<td>-0.0123339836623878</td>
+</tr>
+<tr class="odd">
+<td>individual9</td>
+<td>GBR</td>
+<td>22</td>
+<td>-0.0107669661943635</td>
+<td>0.0275825096725119</td>
+<td>-0.0109637054008316</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: The first nine rows and the first six columns of the result
+table from the 1000 Genomes Project.</p>
+</div>
+<div id="simulated-data-set-for-the-optimal-fixation-index"
+class="section level2">
+<h2>Simulated data set for the optimal Fixation Index</h2>
+<p>As we explained in the supplementary section S3 (see <a
+href="https://doi.org/10.5281/zenodo.7141144"><img
+src="https://zenodo.org/badge/DOI/10.5281/zenodo.7141144.svg"
+alt="DOI" /></a>), we simulated 100 replicates of one population with
+5,000 SNPs and 500 individuals. Figure 4 shows the first 3 principal
+components of one of 100 simulated data set with this setting.</p>
+<p><img src="sim_data_optimal_fst/simSNP_rep1_PC.png" width="600" /></p>
+<p>Figure 4: the first 3 principal components of one population with
+5,000 SNPs and 500 individuals.</p>
+<p>The simulated data files are provided in the PLINK format, which can
+be downloaded from:</p>
+<ol style="list-style-type: decimal">
+<li><p><a
+href="sim_data_optimal_fst/simSNP_rep1.bed">simSNP_rep1.bed</a></p></li>
+<li><p><a
+href="sim_data_optimal_fst/simSNP_rep1.bim">simSNP_rep1.bim</a></p></li>
+<li><p><a
+href="sim_data_optimal_fst/simSNP_rep1.fam">simSNP_rep1.fam</a></p></li>
+<li><p><a
+href="sim_data_optimal_fst/simSNP_rep1_individuals_with_header.txt">individual
+information</a></p></li>
+</ol>
+</div>
+<div id="complex-simulated-data-set" class="section level2">
+<h2>Complex simulated data set</h2>
+<p>We simulated a complex data set consisting of 15 populations, 2000
+individuals, and 5,000 SNPs. The pair-wise Fst (Fixation Index)
+distances for all populations are shown in Table 2. Figure 5 shows the
+first 3 principal components of this complex simulated data set. For the
+result, the IPCAPS detects 15 clusters (see Figure 6). For the accuracy
+of IPCAPS on this complex data set, it can be calculated using Adjusted
+Rand Index (ARI) as</p>
+<pre class="r"><code>library(mclust)
+groups &lt;- read.delim(&quot;sim_complex_data/IPCAPS_groups.txt&quot;)
+ari &lt;- adjustedRandIndex(groups$group, groups$label)
+print(ari)</code></pre>
+<pre><code>## [1] 0.9077214</code></pre>
+<p>Note: The IPCAPS result can be downloaded from <a
+href="sim_complex_data/IPCAPS_groups.txt">here</a></p>
+<table>
+<colgroup>
+<col width="8%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>pop2</th>
+<th>pop3</th>
+<th>pop4</th>
+<th>pop9</th>
+<th>pop6</th>
+<th>pop7</th>
+<th>pop8</th>
+<th>pop10</th>
+<th>pop11</th>
+<th>pop12</th>
+<th>pop13</th>
+<th>pop14</th>
+<th>pop15</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pop1</td>
+<td>0.002</td>
+<td>0.004</td>
+<td>0.005</td>
+<td>0.220</td>
+<td>0.220</td>
+<td>0.222</td>
+<td>0.223</td>
+<td>0.215</td>
+<td>0.214</td>
+<td>0.216</td>
+<td>0.216</td>
+<td>0.216</td>
+<td>0.216</td>
+</tr>
+<tr class="even">
+<td>pop2</td>
+<td></td>
+<td>0.004</td>
+<td>0.005</td>
+<td>0.220</td>
+<td>0.221</td>
+<td>0.223</td>
+<td>0.223</td>
+<td>0.216</td>
+<td>0.214</td>
+<td>0.217</td>
+<td>0.217</td>
+<td>0.216</td>
+<td>0.216</td>
+</tr>
+<tr class="odd">
+<td>pop3</td>
+<td></td>
+<td></td>
+<td>0.007</td>
+<td>0.222</td>
+<td>0.223</td>
+<td>0.224</td>
+<td>0.225</td>
+<td>0.219</td>
+<td>0.217</td>
+<td>0.220</td>
+<td>0.219</td>
+<td>0.219</td>
+<td>0.219</td>
+</tr>
+<tr class="even">
+<td>pop4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.221</td>
+<td>0.222</td>
+<td>0.224</td>
+<td>0.224</td>
+<td>0.217</td>
+<td>0.215</td>
+<td>0.218</td>
+<td>0.218</td>
+<td>0.217</td>
+<td>0.217</td>
+</tr>
+<tr class="odd">
+<td>pop9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.002</td>
+<td>0.003</td>
+<td>0.005</td>
+<td>0.216</td>
+<td>0.217</td>
+<td>0.219</td>
+<td>0.218</td>
+<td>0.218</td>
+<td>0.218</td>
+</tr>
+<tr class="even">
+<td>pop6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.003</td>
+<td>0.005</td>
+<td>0.216</td>
+<td>0.216</td>
+<td>0.219</td>
+<td>0.218</td>
+<td>0.218</td>
+<td>0.218</td>
+</tr>
+<tr class="odd">
+<td>pop7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.006</td>
+<td>0.218</td>
+<td>0.219</td>
+<td>0.221</td>
+<td>0.220</td>
+<td>0.220</td>
+<td>0.220</td>
+</tr>
+<tr class="even">
+<td>pop8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.219</td>
+<td>0.220</td>
+<td>0.222</td>
+<td>0.221</td>
+<td>0.221</td>
+<td>0.221</td>
+</tr>
+<tr class="odd">
+<td>pop10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.003</td>
+<td>0.005</td>
+<td>0.004</td>
+<td>0.005</td>
+<td>0.003</td>
+</tr>
+<tr class="even">
+<td>pop11</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.005</td>
+<td>0.004</td>
+<td>0.005</td>
+<td>0.003</td>
+</tr>
+<tr class="odd">
+<td>pop12</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.006</td>
+<td>0.007</td>
+<td>0.005</td>
+</tr>
+<tr class="even">
+<td>pop13</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.006</td>
+<td>0.004</td>
+</tr>
+<tr class="odd">
+<td>pop14</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.005</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: The pair-wise Fst (Fixation Index) distances simulated
+populations.</p>
+<p><img src="sim_complex_data/simSNP_rep1.png" width="600" /></p>
+<p>Figure 5: the first 3 principal components of the complex simulated
+data set.</p>
+<p><img src="sim_complex_data/IPCAPS_result.png" width="600" /></p>
+<p>Figure 6: the first 3 principal components of the IPCAPS results.</p>
+<p>The simulated data files are provided in the PLINK format, which can
+be downloaded from:</p>
+<ol style="list-style-type: decimal">
+<li><p><a
+href="sim_complex_data/simSNP_rep1.bed">simSNP_rep1.bed</a></p></li>
+<li><p><a
+href="sim_complex_data/simSNP_rep1.bim">simSNP_rep1.bim</a></p></li>
+<li><p><a
+href="sim_complex_data/simSNP_rep1.fam">simSNP_rep1.fam</a></p></li>
+<li><p><a
+href="sim_complex_data/simSNP_rep1_individuals_with_header.txt">individual
+information</a></p></li>
+</ol>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -302,6 +822,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
